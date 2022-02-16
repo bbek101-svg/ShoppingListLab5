@@ -10,9 +10,10 @@
         <h1>Shopping List</h1>
         <p> Hello, ${username} <a href="">Logout</a></p>
         <h2>List</h2>
-        <form action="shoppingList" method="GET">
-            <label for="items">Add Item: </label>
-            <input type="text" name="items" id="items">
+        <form action="ShoppingList" method="POST">
+            <input type="hidden" name="action" value="add">
+            <label for="item">Add Item: </label>
+            <input type="text" name="item" id="items">
             <button type="submit">Add</button>
         </form>
         
