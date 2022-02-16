@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,11 +17,16 @@
             <button type="submit">Add</button>
         </form>
         
-        <form>
-            <p>
-            <input type="radio" name="item" value="apples">
-            Apples
-            </p>
+        <form action="ShoppingList" method="POST">
+            <input type="hidden" name="action" value="delete">
+            <c:forEach items="${items}" var="item">
+               <p>
+                   <input type="radio" name="item" value="<c:out value="${item}"/>">
+                    
+                    ${item}
+                </p> 
+            </c:forEach>
+            
             <button type="submit">Delete</button>
         </form>
     </body>

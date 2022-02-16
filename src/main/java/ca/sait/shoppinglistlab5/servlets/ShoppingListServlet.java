@@ -45,10 +45,6 @@ public class ShoppingListServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
 
-        if(session.getAttribute("username") == null){
-            getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
-            return;
-        }
         String action = request.getParameter("action");
          
         if(action != null && action.equals("add")){
@@ -56,7 +52,14 @@ public class ShoppingListServlet extends HttpServlet {
             ArrayList<String> items = (ArrayList<String>) session.getAttribute("items");
             items.add(item);
             session.setAttribute("items", items);
-        }else{
+        }else if(action !=null && action.equals("delete")){
+            String item = request.getParameter("item");
+            ArrayList<String> items = (ArrayList<String>) session.getAttribute("items");
+            items.remove(item);
+            session.setAttribute("items", items);
+        }
+        
+        else{
             String username = request.getParameter("username");
            
             
