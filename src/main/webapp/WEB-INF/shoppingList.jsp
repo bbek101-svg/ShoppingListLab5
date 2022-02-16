@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Shopping List</h1>
-        <p> Hello, adam <a href="">Logout</a></p>
+        <p> Hello, ${username} <a href="">Logout</a></p>
         <h2>List</h2>
         <form action="shoppingList" method="GET">
             <label for="items">Add Item: </label>
