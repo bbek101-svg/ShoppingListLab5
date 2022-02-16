@@ -7,6 +7,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Shopping List</h1>
+        <p> Hello, adam <a href="">Logout</a></p>
+        <h2>List</h2>
+        <form action="shoppingList" method="GET">
+            <label for="items">Add Item: </label>
+            <input type="text" name="items" id="items">
+            <button type="submit">Add</button>
+        </form>
+        
+        <form>
+            <p>
+            <input type="radio" name="item" value="apples">
+            Apples
+            </p>
+            <button type="submit">Delete</button>
+        </form>
     </body>
 </html>

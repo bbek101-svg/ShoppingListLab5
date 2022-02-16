@@ -12,6 +12,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Shopping List</h1>
+        <form action="shoppingList" method="POST">
+            <div class="username">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username" placeholder="Register username here">
+            </div>
+            <button type="submit">Register Name</button>
+            
+        </form>
+        
     </body>
 </html>
